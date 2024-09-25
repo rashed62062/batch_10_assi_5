@@ -4,17 +4,15 @@ document
     event.preventDefault();
     const addMoney = getInputFieldValueByID("input-add-money");
 
-
     // Function to show the modal
-function showModal() {
-  document.getElementById('my_modal_6').showModal(); // Show the modal
-}
+    function showModal() {
+      document.getElementById("my_modal_6").showModal(); // Show the modal
+    }
 
-// Function to close the modal
-function closeModal() {
-  document.getElementById('my_modal_6').close(); // Close the modal
-}
-
+    // Function to close the modal
+    function closeModal() {
+      document.getElementById("my_modal_6").close(); // Close the modal
+    }
 
     if (isNaN(addMoney)) {
       alert("filed to add money");
@@ -54,8 +52,6 @@ function closeModal() {
   });
 
 //   function
-
-
 
 //      card 2
 
@@ -109,28 +105,19 @@ document
 
 // card 3
 
-
-
 document
   .getElementById("quota-add-money-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
     const addMoney = getInputFieldValueByID("quota-input");
 
+    if (isNaN(addMoney)) {
+      alert("filed to add money");
+      return;
+    }
 
-
-
-
-    
- if (isNaN(addMoney)){
-  alert('filed to add money');
-  return;
- }
-
-    
-    if(addMoney < 0 &&  (addMoney) &&  addMoney <= newBalance){
-    
-      alert(' failed amount');
+    if (addMoney < 0 && addMoney && addMoney <= newBalance) {
+      alert("");
       // document.getElementById('my_modal_6').close();
       return;
     }
@@ -160,33 +147,22 @@ document
   
   `;
 
-
-
     document.getElementById("history-container").appendChild(div);
   });
-
-
 
 //   function
 
 document.getElementById("show-btn").addEventListener("click", function () {
-  showSectionById("add-donate-section","relief-section","Quota-section");
+  showSectionById("add-donate-section", "relief-section", "Quota-section");
 });
 
-// document.getElementById("show-btn").addEventListener("click", function () {
-//   showSectionById("relief-section");
-// });
-// document.getElementById("show-btn").addEventListener("click", function () {
-//   showSectionById("Quota-section");
-// });
-
-document.getElementById('show-btn').addEventListener('click',function(){
-  showSectionById("add-donate-section")
+document.getElementById("show-btn").addEventListener("click", function () {
+  showSectionById("add-donate-section");
 });
-document.getElementById('show-btn').addEventListener('click',function(){
+document.getElementById("show-btn").addEventListener("click", function () {
   showSectionById("relief-section");
 });
-document.getElementById('show-btn').addEventListener('click',function(){
+document.getElementById("show-btn").addEventListener("click", function () {
   showSectionById("Quota-section ");
 });
 
@@ -195,7 +171,3 @@ document
   .addEventListener("click", function () {
     showSectionById("transaction-section");
   });
-
-  
-
-
