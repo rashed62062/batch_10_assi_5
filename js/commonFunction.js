@@ -29,8 +29,8 @@ function  getTexFiledValueById(id){
 function showSectionById(id){
     //  hide all the sections
     document.getElementById('add-donate-section').classList.add('hidden');
-    // document.getElementById('add-donate-section2').classList.add('hidden');
-    // document.getElementById('add-donate-section3').classList.add('hidden');
+    document.getElementById('relief-section').classList.add('hidden');
+    document.getElementById('Quota-section').classList.add('hidden');
     document.getElementById('transaction-section').classList.add('hidden');
 
 

@@ -4,6 +4,18 @@ document
     event.preventDefault();
     const addMoney = getInputFieldValueByID("input-add-money");
 
+
+    // Function to show the modal
+function showModal() {
+  document.getElementById('my_modal_6').showModal(); // Show the modal
+}
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById('my_modal_6').close(); // Close the modal
+}
+
+
     if (isNaN(addMoney)) {
       alert("filed to add money");
       return;
@@ -11,7 +23,6 @@ document
 
     if (addMoney < 0 && addMoney && addMoney <= newBalance) {
       alert(" failed amount");
-      // document.getElementById('my_modal_6').close();
       return;
     }
 
@@ -36,7 +47,7 @@ document
 <h4 class="text-2xl font-bold"></h4>
 
 <p>${addMoney}Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-<p class="text-sm"> Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+<p class="text-sm"> Date :${new Date()}</p>
 
 `;
     document.getElementById("history-container").appendChild(div);
@@ -44,15 +55,7 @@ document
 
 //   function
 
-document.getElementById("show-btn").addEventListener("click", function () {
-  showSectionById("add-donate-section");
-});
 
-document
-  .getElementById("transaction-container")
-  .addEventListener("click", function () {
-    showSectionById("transaction-section");
-  });
 
 //      card 2
 
@@ -96,7 +99,7 @@ document
   <h4 class="text-2xl font-bold"></h4>
   
   <p>${addMoney}Taka is Donate for Flood Relief in Feni,Bangladesh</p>
-  <p class="text-sm"> Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+  <p class="text-sm">Date:${new Date()}</p>
   
   `;
     document.getElementById("history-container").appendChild(div);
@@ -105,6 +108,8 @@ document
 //   function
 
 // card 3
+
+
 
 document
   .getElementById("quota-add-money-btn")
@@ -151,10 +156,46 @@ document
   <h4 class="text-2xl font-bold"></h4>
   
   <p>${addMoney}Taka is Aid for Injured in the Quota Movement</p>
-  <p class="text-sm"> Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+  <p class="text-sm"> Date :${new Date()}</p>
   
   `;
+
+
+
     document.getElementById("history-container").appendChild(div);
   });
 
+
+
 //   function
+
+document.getElementById("show-btn").addEventListener("click", function () {
+  showSectionById("add-donate-section","relief-section","Quota-section");
+});
+
+// document.getElementById("show-btn").addEventListener("click", function () {
+//   showSectionById("relief-section");
+// });
+// document.getElementById("show-btn").addEventListener("click", function () {
+//   showSectionById("Quota-section");
+// });
+
+document.getElementById('show-btn').addEventListener('click',function(){
+  showSectionById("add-donate-section")
+});
+document.getElementById('show-btn').addEventListener('click',function(){
+  showSectionById("relief-section");
+});
+document.getElementById('show-btn').addEventListener('click',function(){
+  showSectionById("Quota-section ");
+});
+
+document
+  .getElementById("transaction-container")
+  .addEventListener("click", function () {
+    showSectionById("transaction-section");
+  });
+
+  
+
+
